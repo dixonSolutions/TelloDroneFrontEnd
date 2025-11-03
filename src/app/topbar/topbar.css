@@ -1,0 +1,40 @@
+:host {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  width: 100%;
+}
+
+/* Menubar container */
+:host ::ng-deep .p-menubar {
+  padding: 0;               /* remove gutters */
+  border-bottom: 1px solid; /* theme-driven color */
+  box-shadow: 0 1px 0;      /* subtle separator */
+  width: 100%;
+}
+
+/* Remove internal paddings/margins */
+:host ::ng-deep .p-menubar-start,
+:host ::ng-deep .p-menubar-end,
+:host ::ng-deep .p-menubar-root-list {
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove item-level paddings */
+:host ::ng-deep .p-menubar-root-list > .p-menubar-item > .p-menubar-item-content {
+  padding: 0;
+}
+
+/* Hamburger/button spacing */
+:host ::ng-deep .p-menubar-button {
+  margin: 0;
+}
+
+/* Optional: tighten inline nav links */
+.nav-links {
+  display: inline-flex;
+  gap: 0.5rem;
+  margin-left: 0;
+}

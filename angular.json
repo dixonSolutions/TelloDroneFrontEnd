@@ -19,9 +19,15 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*.css",
+                "input": "node_modules/@primeuix/themes",
+                "output": "themes"
               }
             ],
             "styles": [
+              "primeicons/primeicons.css",
               "src/styles.css"
             ],
             "server": "src/main.server.ts",
@@ -77,9 +83,15 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*.css",
+                "input": "node_modules/@primeuix/themes",
+                "output": "themes"
               }
             ],
             "styles": [
+              "primeicons/primeicons.css",
               "src/styles.css"
             ]
           }

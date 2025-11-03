@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+/* Menubar: edge-to-edge, no borders, no radius, no gutters */
+app-topbar,
+app-topbar .p-menubar {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Remove internal paddings */
+app-topbar .p-menubar-start,
+app-topbar .p-menubar-end,
+app-topbar .p-menubar-root-list {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Optional: tighten link spacing */
+app-topbar .nav-links { gap: 0.5rem; margin-left: 0; }
