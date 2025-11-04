@@ -1,3 +1,41 @@
 <app-topbar></app-topbar>
 
-<p>install works!</p>
+<section class="install-hero">
+  <h1>One Step Closer to Your dream tello experience!</h1>
+</section>
+
+<p>Switch to fedora linux today for better drone experince!<p-button (click)="install_fedora()">Install</p-button>p-button></p>
+
+<section class="install-body">
+  <p-accordion value="0">
+    <p-accordion-panel value="0">
+      <p-accordion-header>Linux</p-accordion-header>
+      <p-accordion-content>
+        <p>
+          Download the latest Linux build from the releases page.
+        </p>
+        <a href="https://github.com/dixonSolutions/TelloDroneFrontEnd/releases/tag/Linux" target="_blank" rel="noopener" pButton class="p-button-raised" label="Open Linux Release"></a>
+      </p-accordion-content>
+    </p-accordion-panel>
+
+    <p-accordion-panel value="1">
+      <p-accordion-header>Windows</p-accordion-header>
+      <p-accordion-content>
+        <p>
+          Windows builds are provided as a single executable. If not available yet,
+          you can build locally using PyInstaller on Windows.
+        </p>
+      </p-accordion-content>
+    </p-accordion-panel>
+
+    <p-accordion-panel value="2">
+      <p-accordion-header>AppImage</p-accordion-header>
+      <p-accordion-content>
+        <p>
+          Portable AppImage packages may be provided. Alternatively, you can create one using your Linux environment.
+        </p>
+      </p-accordion-content>
+    </p-accordion-panel>
+  </p-accordion>
+  <p-divider></p-divider>
+</section>

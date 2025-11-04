@@ -10,8 +10,8 @@
       <a routerLink="/about" routerLinkActive="active">About</a>
       <a routerLink="/" [fragment]="'features'">Features</a>
       <div class="nav-actions">
-        <i class="pi" [ngClass]="darkMode() ? 'pi-moon' : 'pi-sun'" aria-hidden="true"></i>
-        <p-toggleSwitch [ngModel]="darkMode()" (onChange)="onToggleTheme()"></p-toggleSwitch>
+        <i class="pi" [ngClass]="data.darkMode() ? 'pi-moon' : 'pi-sun'" aria-hidden="true"></i>
+        <p-toggleSwitch [ngModel]="data.darkMode()" (onChange)="onToggleTheme()"></p-toggleSwitch>
       </div>
     </nav>
   </ng-template>
