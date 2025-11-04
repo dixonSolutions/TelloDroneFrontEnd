@@ -24,3 +24,35 @@ app-topbar .p-menubar-root-list {
 
 /* Optional: tighten link spacing */
 app-topbar .nav-links { gap: 0.5rem; margin-left: 0; }
+
+/* Global content centering: keep topbar full-width, center everything else */
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+app-root {
+  display: block;
+  min-height: 100%;
+}
+
+/* Center immediate children of app-root, except the topbar */
+app-root > *:not(app-topbar) {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+/* Explicitly ensure main routed components are block-level */
+app-home,
+app-install,
+app-about {
+  display: block;
+}

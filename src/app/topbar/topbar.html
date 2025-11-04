@@ -6,9 +6,8 @@
     <span class="app-title">TelloApp</span>
     <nav class="nav-links">
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
-      <a routerLink="/install" routerLinkActive="active">Install</a>
+      <a routerLink="/install" routerLinkActive="active"> ✨Install✨</a>
       <a routerLink="/about" routerLinkActive="active">About</a>
-      <a routerLink="/" [fragment]="'features'">Features</a>
       <div class="nav-actions">
         <i class="pi" [ngClass]="data.darkMode() ? 'pi-moon' : 'pi-sun'" aria-hidden="true"></i>
         <p-toggleSwitch [ngModel]="data.darkMode()" (onChange)="onToggleTheme()"></p-toggleSwitch>
