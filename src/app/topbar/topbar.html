@@ -7,14 +7,14 @@
     <nav class="nav-links">
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
       <a routerLink="/install" routerLinkActive="active">Install</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+      <a routerLink="/" [fragment]="'features'">Features</a>
+      <div class="nav-actions">
+        <i class="pi" [ngClass]="darkMode() ? 'pi-moon' : 'pi-sun'" aria-hidden="true"></i>
+        <p-toggleSwitch [ngModel]="darkMode()" (onChange)="onToggleTheme()"></p-toggleSwitch>
+      </div>
     </nav>
   </ng-template>
-  <ng-template pTemplate="end">
-    <div class="topbar-actions">
-      <p-select [options]="featureOptions" optionLabel="label" optionValue="id" [placeholder]="'Features'" (onChange)="goToFeature($event.value)"></p-select>
-      <i class="pi" [ngClass]="darkMode() ? 'pi-moon' : 'pi-sun'" aria-hidden="true"></i>
-      <p-toggleSwitch [ngModel]="darkMode()" (onChange)="onToggleTheme()"></p-toggleSwitch>
-    </div>
-  </ng-template>
+  <ng-template pTemplate="end"></ng-template>
   
 </p-menubar>
